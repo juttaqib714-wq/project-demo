@@ -1,0 +1,250 @@
+/* Core Styling Rules & Document Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 20px;
+}
+
+/* Main Container Component using CSS Flexbox / Grid structure styles */
+.resume-wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sidebar Layout Presentation Styling */
+.sidebar {
+    width: 33%;
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 40px 25px;
+}
+
+.profile-container {
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-container h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #93c5fd;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    font-size: 1.2rem;
+    color: #3b82f6;
+    text-transform: uppercase;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-list, .skills-list, .languages-list {
+    list-style: none;
+}
+
+.contact-list li, .skills-list li, .languages-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.contact-list a {
+    color: #93c5fd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+.skills-list li {
+    background-color: #273549;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    border-left: 3px solid #3b82f6;
+}
+
+/* Main Content Panel Presentation Layouts */
+.main-content {
+    width: 67%;
+    padding: 40px 35px;
+    background-color: #ffffff;
+}
+
+.content-section {
+    margin-bottom: 35px;
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    border-bottom: 3px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Career Timeline Components */
+.experience-block {
+    margin-bottom: 25px;
+}
+
+.exp-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.experience-block h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-weight: 600;
+    color: #3b82f6;
+    margin-right: 10px;
+}
+
+.exp-date {
+    margin-left: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #f1f5f9;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: #475569;
+}
+
+.exp-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    text-align: justify;
+}
+
+/* Table Presentational Architectures */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.education-table th, .education-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.education-table th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* Reference Modular Card Layouts */
+.reference-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.ref-card {
+    flex: 1;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.ref-card h4 {
+    color: #1e293b;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.ref-sub {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.ref-contact {
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.ref-contact a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.ref-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Optimization rules */
+@media (max-width: 768px) {
+    .resume-wrapper {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+    .exp-header {
+        flex-direction: column;
+    }
+    .exp-date {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .reference-grid {
+        flex-direction: column;
+    }
+}
